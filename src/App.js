@@ -1,44 +1,38 @@
-import './App.css';
-import { useState } from 'react';
-import LoginForm from './components/LoginForm';
-import Slider from './components/Slider/Slider'
+import React from "react";
+import './App.css'
+import Button from "./components/Practice_calculater/Button";
+import Input from "./components/Practice_calculater/Input";
 
-function App() {
-  const adminUser = {
-    email: "admin@admin.com",
-    password: "admin"
-  }
-  const [user,setUser] = useState({name:"",email:""});
-  const [error,setError] = useState("");
-  const Login = details =>{
-    console.log(details);
-    if (details.email == adminUser.email && details.password == adminUser.password){
-      console.log("Logged in")
-      setUser({
-        name: details.name,
-        email: details.email
-      })
-    }else{
-      console.log("details are not match")
-      setError("Details are not match!");
-    }
-  }
-  const Logout = () =>{
-    setUser({name:"",email:""})
-  }
+const App = () => {
   return (
-    <div className="container">
-      {(user.email != "") ? (
-        <div className='inner'>
-          <div className='welcome'>
-            <h2>Welcome,<span>{user.name}</span></h2>
-            <Slider/>
-            <button onClick={Logout}>Logout</button>
-          </div>
+    <div className="app-container">
+      <div className="calc-wrapper">
+        <Input input={this.state.input}></Input>
+        <div className="row">
+          <Button>7</Button>
+          <Button>8</Button>
+          <Button>9</Button>
+          <Button>/</Button>
         </div>
-      ):(
-        <LoginForm Login={Login} error={error}/>
-      )}
+        <div className="row">
+          <Button>4</Button>
+          <Button>5</Button>
+          <Button>6</Button>
+          <Button>X</Button>
+        </div>
+        <div className="row">
+          <Button>1</Button>
+          <Button>2</Button>
+          <Button>3</Button>
+          <Button>+</Button>
+        </div>
+        <div className="row">
+          <Button>.</Button>
+          <Button>0</Button>
+          <Button>=</Button>
+          <Button>-</Button>
+        </div>
+      </div>
     </div>
   );
 }
