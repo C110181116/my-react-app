@@ -1,9 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.main-container{
+.todoindex-container{
     background-image: linear-gradient(to bottom right,#660066,#006180);
     color: white;
     font-family: "Poppins", sans-serif;
@@ -13,33 +8,32 @@ header{
     font-size: 2rem;
 }
   
-header,
-form{
+.todo-header,
+.main-form{
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form input
+.main-form input
 {
     padding: 0.4rem;
     font-size: 2rem;
     border: none;
     background: white;
 }
-form button{
+.main-form button{
     padding: 0.5rem;
     color: #494cf0;
     background: #f7fffe;
     cursor: pointer;
     transition: all 0.3s ease;
-    
 }
-form img{
+.main-form img{
     width: 2rem;
     height: 2rem;
 }
-form button:hover {
+.main-form button:hover {
     background: #494cf0;
     color: white;
 }

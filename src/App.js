@@ -1,39 +1,23 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Button from "./components/Practice_calculater/Button";
-import Input from "./components/Practice_calculater/Input";
+import Calculator from "./components/Calculator/CalculatorIndex";
+import TodoList from "./components/TodoList/TodoListIndex";
+import LoginForm from "./components/LoginForm_Slider/LoginIndex";
+import ImgUpload from "./components/ImgUpload/UploadIndex";
+import MyPortfolio from "./components/Portfolio/MyPortfolio";
 
 const App = () => {
   return (
-    <div className="app-container">
-      <div className="calc-wrapper">
-        <Input input={this.state.input}></Input>
-        <div className="row">
-          <Button>7</Button>
-          <Button>8</Button>
-          <Button>9</Button>
-          <Button>/</Button>
-        </div>
-        <div className="row">
-          <Button>4</Button>
-          <Button>5</Button>
-          <Button>6</Button>
-          <Button>X</Button>
-        </div>
-        <div className="row">
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>+</Button>
-        </div>
-        <div className="row">
-          <Button>.</Button>
-          <Button>0</Button>
-          <Button>=</Button>
-          <Button>-</Button>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element = {<MyPortfolio/>}/>
+        <Route path="/LoginForm" element = {<LoginForm/>}/>
+        <Route path="/TodoList" element = {<TodoList/>}/>
+        <Route path="/Calculator" element = {<Calculator/>}/>
+        <Route path="/ImgUpload" element = {<ImgUpload/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

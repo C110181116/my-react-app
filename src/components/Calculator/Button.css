@@ -1,0 +1,41 @@
+.calindex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.show-result{
+    width: 307px;
+    height: 75px;
+    text-align: right;
+    background-color: black;
+    color: snow;
+    font-size: 45px;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.clear-btn{
+    margin: 1px;
+    border: none;
+    height: 37.5px;
+    width: 306px;
+    font-size: 30px;
+    background-color: rgb(172, 172, 172);
+}
+.cal-btn{
+    margin: 1px;
+    border: none;
+    height: 75px;
+    width: 75px;
+    background-color: rgb(172, 172, 172);
+}
+.operator{
+    background-color: rgb(241, 184, 77);
+    margin: 1px;
+    border: none;
+    height: 75px;
+    width: 75px;
+}

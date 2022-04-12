@@ -16,8 +16,8 @@ function Form({setInputText,inputText,setTodos,todos,setStatus}) {
         setStatus(e.target.value)
     }
   return (
-    <form className="form">
-        <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input"/>
+    <form className="main-form">
+        <input className="todo-input" value={inputText} onChange={inputTextHandler} type="text"/>
         <button className="todo-button" type="submit" onClick={submitHandler}>
             <img src={process.env.PUBLIC_URL + "/imgs/add.png"} className="button-img"></img>
         </button>

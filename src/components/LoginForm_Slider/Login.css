@@ -1,18 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: montserrat, sans-serif;
-  }
-  
-  input, button{
+  .form-inner input,
+  .welcome button{
     appearance: none;
     background: none;
     border: none;
     outline: none;
   }
   
-  .container{
+  .login-container{
+    font-family: montserrat, sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -27,12 +22,12 @@
     z-index: 1;
     background-image: linear-gradient(to bottom right,#660066,#006180);
   }
-  form{
+  .loginform{
     display: block;
     position: relative;
   }
   
-  form:after{
+  .loginform:after{
     content: '';
     display: block;
     position: absolute;
@@ -64,7 +59,7 @@
     margin-bottom: 15px;
   }
   
-  .form-inner .form-group lable{
+  .form-inner .form-group label{
     display: block;
     color: #53565A;
     font-size: 12px;

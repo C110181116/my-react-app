@@ -28,7 +28,7 @@ export default function LoginIndex() {
         setUser({name:"",email:""})
       }
       return (
-        <div className="container">
+        <div className="login-container">
           {(user.email != "") ? (
             <div className='inner'>
               <div className='welcome'>

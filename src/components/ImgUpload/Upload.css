@@ -1,0 +1,27 @@
+.upload-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.label-upload{
+    width: 95%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: double rgb(216, 44, 216);
+}
+
+
+.upload-container img{
+    width: 50vh;
+    height: 50vh;
+}
+
+.input-upload{
+    display: none;
+}

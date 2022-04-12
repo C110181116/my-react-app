@@ -45,8 +45,8 @@ function TodoListIndex() {
     }
   }
   return (
-    <div className="main-container">
-        <header>Todo List</header>
+    <div className="todoindex-container">
+        <header className="todo-header">Todo List</header>
       <Form 
         setInputText = {setInputText}
         inputText = {inputText} 
