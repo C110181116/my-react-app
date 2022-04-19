@@ -12,3 +12,13 @@ export const formPost = async (endPoint, data) =>{
         }
     })
 }
+
+export const getAlbum = (album) => get(`/album/${album}`)
+
+export const get = (endPoint) =>{
+    return axios.get(API_URL + endPoint,{
+        headers:{
+            Authorization: process.env.REACT_APP_TOKEN
+        }
+    })
+}

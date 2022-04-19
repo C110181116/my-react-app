@@ -4,12 +4,13 @@
     align-items: center;
     width: 100%;
     height: 100vh;
+    flex-direction: column-reverse;
 }
 
 
 .label-upload{
     width: 95%;
-    height: 95vh;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +18,28 @@
 }
 
 
-.upload-container img{
+.upload-container .upload-img{
     width: 50vh;
     height: 50vh;
 }
 
 .input-upload{
     display: none;
+}
+
+.img-list{
+    display: inline-flex;
+    width: 95%;
+    height: 20%;
+    border: double rgb(128, 44, 128);
+    margin: 5px;
+    justify-content:left;
+    flex-wrap: nowrap;
+}
+
+.img-list img{
+    width: 15%;
+    height: 95%;
+    margin: 5px;
+    
 }
