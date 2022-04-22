@@ -13,7 +13,7 @@ export const formPost = async (endPoint, data) =>{
     })
 }
 
-export const getAlbum = (album) => get(`/album/${album}`)
+export const getAlbum = (album) => get(`/album/${album}/images`)
 
 export const get = (endPoint) =>{
     return axios.get(API_URL + endPoint,{

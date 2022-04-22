@@ -5,13 +5,18 @@ import ImgList from './ImgList';
 
 function UploadIndex() {
   const [albumData,setAlbumData] = useState([]);
+  const [imgUrl,setImgUrl] = useState("");
 
   useEffect(async () => {
     const album = await getAlbum("OaQ74uy")
-    setAlbumData(album.data.data.images)
-  })
+    setAlbumData(album.data.data)
+  },[])
 
-  const [imgUrl,setImgUrl] = useState("");
+  useEffect(async () => {
+    const album = await getAlbum("OaQ74uy")
+    setAlbumData(album.data.data)
+  },[imgUrl])
+
   const fileLoad = async (e) => {
     const formData = new FormData();
     const image = e.target.files[0];
